@@ -7331,6 +7331,126 @@ and +1 Matrix initiative dice">
         </div>
     </div>
     <div class="content6">
+        <div class="cyberdeck">
+            <h2>RCC</h2>
+            <div class="deckrow">
+                <div class="deckrowlabel"></div>
+                <div class="decklabelwrapper"><label>Data P.</label></div>
+                <div class="decklabelwrapper"><label>Firewall</label></div>
+                <div class="decklabelwrapper"><label>Dev Rtg</label></div>
+            </div>
+            <div class="deckrow">
+                <div class="deckrowlabel">
+                    <label>Base</label>
+                </div>
+                <div class="deckinputwrapper">
+                    <input type="text" name="attr_rcc_datap_base" title="Base Value without Modifications or other Bonuses" value="0">
+                </div>
+                <div class="deckinputwrapper">
+                    <input type="text" name="attr_rcc_firewall_base" title="Base Value without Modifications or other Bonuses" value="0">
+                </div>
+                <div class="deckinputwrapper">
+                    <input type="text" name="attr_rcc_devicertg_base" title="Base Value without Modifications or other Bonuses" value="0">
+                </div>
+            </div>
+            <div class="deckrow">
+                <div class="deckrowlabel">
+                    <label>Bonus</label>
+                </div>
+                <div class="deckinputwrapper">
+                    <input type="text" name="attr_rcc_datap_bonus" title="Modifications or other Bonuses" value="0">
+                </div>
+                <div class="deckinputwrapper">
+                    <input type="text" name="attr_rcc_firewall_bonus" title="Modifications or other Bonuses" value="0">
+                </div>
+                <div class="deckinputwrapper">
+                    <input type="text" name="attr_rcc_devicertg_bonus" title="Modifications or other Bonuses" value="0">
+                </div>
+            </div>
+            <div class="deckrow">
+                <div class="deckrowlabel">
+                    <label>Total</label>
+                </div>
+                <div class="deckinputwrapper">
+                    <input type="number" name="attr_rcc_datap_total" value="@{rcc_datap_base}+@{rcc_datap_bonus}" title="Base + Bonus" disabled="true">
+                </div>
+                <div class="deckinputwrapper">
+                    <input type="number" name="attr_rcc_firewall_total" value="@{rcc_firewall_base}+@{rcc_firewall_bonus}" title="Base + Bonus" disabled="true">
+                </div>
+                <div class="deckinputwrapper">
+                    <input type="number" name="attr_rcc_devicertg_total" value="@{rcc_devicertg_base}+@{rcc_devicertg_bonus}" title="Base + Bonus" disabled="true">
+                </div>
+            </div>
+            <div class="deckrow">
+                <div class="deckrowlabel"></div>
+                <div class="decklabelwrapper"><label>Damage</label></div>
+                <div class="decklabelwrapper"><label>Condition</label></div>
+                <div class="decklabelwrapper"><label>Noise Red</label></div>
+            </div>
+            <div class="deckrow">
+                <div class="deckrowlabel">
+                    <label>Misc</label>
+                </div>
+                <div class="deckinputwrapper">
+                    <input type="text" name="attr_rccdamage" value="0" title="How much Matrix Damage it took">
+                </div>
+                <div class="deckinputwrapper">
+                    <input type="number" name="attr_rcccondition" value="ceil((@{devicertg_total})/2)+8-@{deckdamage}" title="How much Matrix Damage remaining untill bricked" disabled="true">
+                </div>
+                <div class="deckinputwrapper">
+                    <input type="text" name="attr_rccnoisereduction" title="Total Noise Reduction of the Device" title="(optional) How much Noisereduction total" value="0">
+                </div>
+            </div>
+            <div class="deckrow">
+                <div class="deckrowlabel"></div>
+                <div class="decklabelwrapper"><label>Resistance</label></div>
+                <div class="decklabelwrapper"><label>Defenseroll</label></div>
+                <div class="decklabelwrapper"><label>Stay Silent</label></div>
+            </div>
+            <div class="deckrow">
+                <div class="deckrowlabel">
+                    <label>Rolls</label>
+                </div>
+                <div class="deckinputwrapper">
+                    <button type="roll" class="deckroll" name="roll_rccresistance" title="Click to resist Matrix Damage" value="@{gmroll}&{template:shadowrun}{{name=@{character_name}}}{{roll_name=to resist damage}}{{val1=Firewall}}{{val1_num=[[@{firewall_total}]]}}{{val2=Device Rtg}}{{val2_num=[[@{devicertg_total}]]}}{{mod_num=[[?{Situational Modifiers|0}]]}}{{edge=@{edgeroll}}}{{edge_num=[[@{edg_total}]]}}{{result=[[(@{firewall_total}+@{devicertg_total}+?{Situational Modifiers|0}+[[@{edgn}*@{edg_total}]])@{standardroll}@{edgeroll}]]}}" />
+                </div>
+                <div class="deckinputwrapper">
+                    <button type="roll" class="deckroll" name="roll_rccdefense" title="Click to Roll Matrix Defense" value="@{gmroll}&{template:shadowrun}{{name=@{character_name}}}{{roll_name=to Defend}}{{val1=Firewall}}{{val1_num=[[@{firewall_total}]]}}{{val2=Attribute}}{{val2_num=[[?{Attribute|Willpower,@{wil_total}|Logic,@{log_total}|Intuition,@{int_total}}]]}}{{mod_num=[[?{Situational Modifiers|0}]]}}{{edge=@{edgeroll}}}{{edge_num=[[@{edg_total}]]}}{{result=[[(@{firewall_total}+?{Attribute}+?{Situational Modifiers|0}+[[@{edgn}*@{edg_total}]])@{standardroll}@{edgeroll}]]}}" />
+                </div>
+                <div class="deckinputwrapper">
+                    <button type="roll" class="deckroll" name="roll_rccantispott" title="Click to Roll against Matrix Perception" value="@{gmroll}&{template:shadowrun}{{name=@{character_name}}}{{roll_name=to stay hidden}}{{val1=Sleaze}}{{val1_num=[[@{sleaze_total}]]}}{{val2=Logic}}{{val2_num=[[@{log_total}]]}}{{mod_num=[[?{Situational Modifiers|0}]]}}{{edge=@{edgeroll}}}{{edge_num=[[@{edg_total}]]}}{{result=[[(@{sleaze_total}+@{log_total}+?{Situational Modifiers|0}+[[@{edgn}*@{edg_total}]])@{standardroll}@{edgeroll}]]}}" />
+                </div>
+            </div>
+        </div>
+        <div class="cyberprograms">
+            <h2>Cyberprograms</h2>
+            <div class="programrow">
+                <div class="programnamewrapper">
+                    <label>Name</label>
+                </div>
+                <div class="programdescriptionwrapper">
+                    <label>Description</label>
+                </div>
+                <div class="programloadedwrapper">
+                    <label>Loaded</label>
+                </div>
+            </div>
+            <fieldset class="repeating_programs">
+                <div class="programrow">
+                    <div class="programnamewrapper">
+                        <input type="text" name="attr_rcc_programname" title="Name of the Program">
+                    </div>
+                    <div class="programdescriptionwrapper">
+                        <input type="text" name="attr_rcc_programdescription" title="Description">
+                    </div>
+                    <div class="programloadedwrapper">
+                        <input class="programcheckbox hiddencheckbox" type="checkbox" name="attr_rcc_programloaded" title="Program loaded?">
+                        <div class="checkboxticker programunticked"></div>
+                        <div class="checkboxticker programticked">X</div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
         <div class="vehicle">
             <h2>Vehicles</h2>
             <div class="vehiclerow">
@@ -9379,6 +9499,39 @@ Only takes the first match even if multiple identical entries are found.">
                     <textarea name="attr_notes"></textarea>
                 </div>
             </div>
+            <div class="karmalog">
+                <h2>Karma Log</h2>
+                <div class="equipmentrow">
+                    <div class="equipmentdescriptionwrapper">
+                        <label>Date</label>
+                    </div>
+                    <div class="equipmentnumberwrapper">
+                        <label>Game #</label>
+                    </div>
+                    <div class="equipmentnumberwrapper">
+                        <label>Amount</label>
+                    </div>
+                    <div class="equipmentdescriptionwrapper">
+                        <label>Spent on or earned for....</label>
+                    </div>
+                </div>
+                <fieldset class="repeating_karma">
+                    <div class="equipmentrow">
+                        <div class="equipmentdescriptionwrapper">
+                            <input type="text" name="attr_karmaname" />
+                        </div>
+                        <div class="equipmentnumberwrapper">
+                            <input type="number" name="attr_karmagame" />
+                        </div>
+                        <div class="equipmentnumberwrapper">
+                            <input type="number" name="attr_karmaamount" />
+                        </div>
+                        <div class="equipmentdescriptionwrapper">
+                            <input type="text" name="attr_karmanotes" />
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
         </div>
         <div class="contacts">
             <h2>Contacts</h2>
@@ -9490,33 +9643,12 @@ Only takes the first match even if multiple identical entries are found.">
                 <div><input type="text" name="attr_stuntrackmod" value="0" title="Additional empty Damage Boxes for the stun Track"></div>
                 </div>
             </div>
-            <div class="chummerimport">
-                <h2>Chummer Import</h2>
-                <div class="chummertextfield">
-                    <textarea name="attr_chummertext"></textarea>
-                </div>
-                <div class="importbuttons">
-                    <input class="warningcheckbox" type="checkbox" name="attr_warningcheckbox">
-                    <div class="warninguncheckedwrapper">
-                        <label class="warningunchecked">Import</label>
-                    </div>
-                    <div class="warningcheckedwrapper">
-                        <label class="warningchecked">Cancle</label>
-                    </div>
-                    <input class="chummercheckbox" type="checkbox" name="attr_chummercheckbox">
-                    <div class="warningcheckedwrapper">
-                        <label class="warningchecked">I Accept</label>
-                    </div>
-                    <div class="warningtext">This will override everything</div>
-                    <div class="waitingtext">Please Wait!</div>
-                </div>
-            </div>
         </div>
-        
-        
-        
-        
-        
+
+
+
+
+
         <div class="hiddentextfield"><input type="text" name="attr_wound_total" value="{floor((@{stunwoundstaken}-@{woundadditive})/@{woundmultiplikative}),0}kh1+{floor((@{physicalwoundstaken}-@{woundadditive})/@{woundmultiplikative}),0}kh1"></div>
         <div class="hiddentextfield"><input type="text" name="attr_res_total" value="@{mag_base}+@{mag_aug}"></div>
         <div class="hiddentextfield"><input type="text" name="attr_bod_name" value="Body"></div>
