@@ -1192,6 +1192,20 @@
                         </td>
                     </tr>
                     <tr>
+                        <td>
+                            <input type="checkbox" name="attr_firearms-success-3" />
+                        </td>
+                        <td>
+                            <input type="text" name="attr_firearms-name-3" data-i18n-placeholder="firearms-name-place" placeholder="Arme à feu" style="width: 145px" />
+                        </td>
+                        <td>
+                            <input type="number" name="attr_firearms-3" />
+                        </td>
+                        <td>
+                            <button type="roll" value="@{PC-whisper} &{template:coc_skills} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=@{firearms-name-3}}} {{skill_threshold=[[@{firearms-3}]]}} {{special_success=[[(ceil(@{firearms-3}/5))]]}} {{diceroll=[[1d100cs<1cf>100]]}}" />
+                        </td>
+                    </tr>
+                    <tr>
                         <td></td>
                         <td><span data-i18n="bladed-weapons">Armes blanches</span>(20%)</td>
                         <td></td>
@@ -1663,7 +1677,10 @@
         <h3 style="text-align: center; color: #FFF; background-color: #000;"><span data-i18n="notes">Notes</span></h3>
         <textarea name="attr_notes"></textarea>
     </div>
-
+    <div>
+        <h3 style="text-align: center; color: #FFF; background-color: #000;"><span data-i18n="notes">Liens avec les autres personnages</span></h3>
+        <textarea name="attr_links_to_pc"></textarea>
+    </div>
     <div>
         <h3 style="text-align: center; color: #FFF; background-color: #000;"><span data-i18n="configuration">Configuration</span></h3>
         <span data-i18n="rolls-results">Résultat des jets</span> :
