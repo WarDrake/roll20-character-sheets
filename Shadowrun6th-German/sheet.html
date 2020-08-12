@@ -1063,7 +1063,7 @@
                             <div class="table-cell"><input class="smallinput" type="number" name="attr_display_iniphys" value="4" placeholder="4" readonly/></div>
                             <div class="table-cell">
                                 <button class="mediumbutton" type="roll" name="iniphys" value="@{gm_toggle} &{template:initiative}{{mainattribute=^{iniphys}}}{{dice=[[(@{display_iniphys}+@{use_wounds}+@{sustain_malus})+3d6cs>7cf<0 &{tracker}]]}}">
-                                        <span class="red" data-18n="select_token">Tokenroll</span>
+                                        <span class="red" data-i18n="select_token">Tokenroll</span>
                                 </button>
                             </div>
                         </div>
@@ -1076,7 +1076,7 @@
                             <div class="table-cell"><input class="smallinput" type="number" name="attr_display_inimatrix" value="4" placeholder="4" readonly/></div>
                             <div class="table-cell">
                                 <button class="mediumbutton" type="roll" name="inimatrix" value="@{gm_toggle} &{template:initiative}{{mainattribute=^{inimatrix}}}{{dice=[[(@{display_inimatrix}+@{use_wounds}+@{sustain_malus})+3d6cs>7cf<0 &{tracker}]]}}">
-                                        <span class="red" data-18n="select_token">Tokenroll</span>
+                                        <span class="red" data-i18n="select_token">Tokenroll</span>
                                 </button>
                             </div>
                         </div>
@@ -1089,7 +1089,7 @@
                             <div class="table-cell"><input class="smallinput" type="number" name="attr_display_iniastral" value="4" placeholder="4" readonly/></div>
                             <div class="table-cell">
                                 <button class="mediumbutton" type="roll" name="iniastral" value="@{gm_toggle} &{template:initiative}{{mainattribute=^{iniastral}}}{{dice=[[(@{display_iniastral}+@{use_wounds}+@{sustain_malus})+2d6cs>7cf<0 &{tracker}]]}}">
-                                        <span class="red" data-18n="select_token">Tokenroll</span>
+                                        <span class="red" data-i18n="select_token">Tokenroll</span>
                                 </button>
                             </div>
                         </div>
@@ -1192,7 +1192,7 @@
 									<span class="visible-astral-spec"></span>
 									<span class="invisible-astral-spec">
 										<button class="widesmallbutton" type="roll" name="@{skill_astral_total}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{skill_astral_attribute}}}}{{secondattribute=^{skill_astral}}}{{specialisation=@{skill_astral_spec}}}{{dice=[[(@{skill_astral_total}+2+@{use_wounds}+@{sustain_malus}+@{mod_roll})d6@{exploding_dice}cs>5>5sd]]}}">
-											<span class="red" data-18n="spec_short">Spez.</span>
+											<span class="red" data-i18n="spec_short">Spez.</span>
 										</button>
 									</span>
 								</div>
@@ -1216,7 +1216,7 @@
 									<span class="visible-astral-exp"></span>
 									<span class="invisible-astral-exp">
 										<button class="widesmallbutton" type="roll" name="@{skill_astral_total}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{skill_astral_attribute}}}}{{secondattribute=^{skill_astral}}}{{expertise=@{skill_astral_exp}}}{{dice=[[(@{skill_astral_total}+3+@{use_wounds}+@{sustain_malus}+@{mod_roll})d6@{exploding_dice}cs>5>5sd]]}}">
-											<span class="red" data-18n="exp_short">Exp.</span>
+											<span class="red" data-i18n="exp_short">Exp.</span>
 										</button>
 									</span>
 								</div>
@@ -1291,7 +1291,7 @@
 									<span class="visible-athletics-spec"></span>
 									<span class="invisible-athletics-spec">
 										<button class="widesmallbutton" type="roll" name="@{skill_athletics_total}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{skill_athletics_attribute}}}}{{secondattribute=^{skill_athletics}}}{{specialisation=@{skill_athletics_spec}}}{{dice=[[(@{skill_athletics_total}+2+@{use_wounds}+@{sustain_malus}+@{mod_roll})d6@{exploding_dice}cs>5>5sd]]}}">
-											<span class="red" data-18n="spec_short">Spez.</span>
+											<span class="red" data-i18n="spec_short">Spez.</span>
 										</button>
 									</span>
 								</div>
@@ -1315,7 +1315,7 @@
 									<span class="visible-athletics-exp"></span>
 									<span class="invisible-athletics-exp">
 										<button class="widesmallbutton" type="roll" name="@{skill_athletics_total}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{skill_athletics_attribute}}}}{{secondattribute=^{skill_athletics}}}{{expertise=@{skill_athletics_exp}}}{{dice=[[(@{skill_athletics_total}+3+@{use_wounds}+@{sustain_malus}+@{mod_roll})d6@{exploding_dice}cs>5>5sd]]}}">
-											<span class="red" data-18n="exp_short">Exp.</span>
+											<span class="red" data-i18n="exp_short">Exp.</span>
 										</button>
 									</span>
 								</div>
@@ -1390,7 +1390,7 @@
 									<span class="visible-biotech-spec"></span>
 									<span class="invisible-biotech-spec">
 										<button class="widesmallbutton" type="roll" name="@{skill_biotech_total}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{skill_biotech_attribute}}}}{{secondattribute=^{skill_biotech}}}{{specialisation=@{skill_biotech_spec}}}{{dice=[[(@{skill_biotech_total}+2+@{use_wounds}+@{sustain_malus}+@{mod_roll})d6@{exploding_dice}cs>5>5sd]]}}">
-											<span class="red" data-18n="spec_short">Spez.</span>
+											<span class="red" data-i18n="spec_short">Spez.</span>
 										</button>
 									</span>
 								</div>
@@ -1414,7 +1414,7 @@
 									<span class="visible-biotech-exp"></span>
 									<span class="invisible-biotech-exp">
 										<button class="widesmallbutton" type="roll" name="@{skill_biotech_total}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{skill_biotech_attribute}}}}{{secondattribute=^{skill_biotech}}}{{expertise=@{skill_biotech_exp}}}{{dice=[[(@{skill_biotech_total}+3+@{use_wounds}+@{sustain_malus}+@{mod_roll})d6@{exploding_dice}cs>5>5sd]]}}">
-											<span class="red" data-18n="exp_short">Exp.</span>
+											<span class="red" data-i18n="exp_short">Exp.</span>
 										</button>
 									</span>
 								</div>
@@ -1489,7 +1489,7 @@
 									<span class="visible-cracking-spec"></span>
 									<span class="invisible-cracking-spec">
 										<button class="widesmallbutton" type="roll" name="@{skill_cracking_total}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{skill_cracking_attribute}}}}{{secondattribute=^{skill_cracking}}}{{specialisation=@{skill_cracking_spec}}}{{dice=[[(@{skill_cracking_total}+2+@{use_wounds}+@{sustain_malus}+@{mod_roll})d6@{exploding_dice}cs>5>5sd]]}}">
-											<span class="red" data-18n="spec_short">Spez.</span>
+											<span class="red" data-i18n="spec_short">Spez.</span>
 										</button>
 									</span>
 								</div>
@@ -1513,7 +1513,7 @@
 									<span class="visible-cracking-exp"></span>
 									<span class="invisible-cracking-exp">
 										<button class="widesmallbutton" type="roll" name="@{skill_cracking_total}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{skill_cracking_attribute}}}}{{secondattribute=^{skill_cracking}}}{{expertise=@{skill_cracking_exp}}}{{dice=[[(@{skill_cracking_total}+3+@{use_wounds}+@{sustain_malus}+@{mod_roll})d6@{exploding_dice}cs>5>5sd]]}}">
-											<span class="red" data-18n="exp_short">Exp.</span>
+											<span class="red" data-i18n="exp_short">Exp.</span>
 										</button>
 									</span>
 								</div>
@@ -1588,7 +1588,7 @@
 									<span class="visible-influence-spec"></span>
 									<span class="invisible-influence-spec">
 										<button class="widesmallbutton" type="roll" name="@{skill_influence_total}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{skill_influence_attribute}}}}{{secondattribute=^{skill_influence}}}{{specialisation=@{skill_influence_spec}}}{{dice=[[(@{skill_influence_total}+2+@{use_wounds}+@{sustain_malus}+@{mod_roll})d6@{exploding_dice}cs>5>5sd]]}}">
-											<span class="red" data-18n="spec_short">Spez.</span>
+											<span class="red" data-i18n="spec_short">Spez.</span>
 										</button>
 									</span>
 								</div>
@@ -1612,7 +1612,7 @@
 									<span class="visible-influence-exp"></span>
 									<span class="invisible-influence-exp">
 										<button class="widesmallbutton" type="roll" name="@{skill_influence_total}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{skill_influence_attribute}}}}{{secondattribute=^{skill_influence}}}{{expertise=@{skill_influence_exp}}}{{dice=[[(@{skill_influence_total}+3+@{use_wounds}+@{sustain_malus}+@{mod_roll})d6@{exploding_dice}cs>5>5sd]]}}">
-											<span class="red" data-18n="exp_short">Exp.</span>
+											<span class="red" data-i18n="exp_short">Exp.</span>
 										</button>
 									</span>
 								</div>
@@ -1687,7 +1687,7 @@
 									<span class="visible-electronics-spec"></span>
 									<span class="invisible-electronics-spec">
 										<button class="widesmallbutton" type="roll" name="@{skill_electronics_total}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{skill_electronics_attribute}}}}{{secondattribute=^{skill_electronics}}}{{specialisation=@{skill_electronics_spec}}}{{dice=[[(@{skill_electronics_total}+2+@{use_wounds}+@{sustain_malus}+@{mod_roll})d6@{exploding_dice}cs>5>5sd]]}}">
-											<span class="red" data-18n="spec_short">Spez.</span>
+											<span class="red" data-i18n="spec_short">Spez.</span>
 										</button>
 									</span>
 								</div>
@@ -1711,7 +1711,7 @@
 									<span class="visible-electronics-exp"></span>
 									<span class="invisible-electronics-exp">
 										<button class="widesmallbutton" type="roll" name="@{skill_electronics_total}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{skill_electronics_attribute}}}}{{secondattribute=^{skill_electronics}}}{{expertise=@{skill_electronics_exp}}}{{dice=[[(@{skill_electronics_total}+3+@{use_wounds}+@{sustain_malus}+@{mod_roll})d6@{exploding_dice}cs>5>5sd]]}}">
-											<span class="red" data-18n="exp_short">Exp.</span>
+											<span class="red" data-i18n="exp_short">Exp.</span>
 										</button>
 									</span>
 								</div>
@@ -1786,7 +1786,7 @@
 									<span class="visible-firearms-spec"></span>
 									<span class="invisible-firearms-spec">
 										<button class="widesmallbutton" type="roll" name="@{skill_firearms_total}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{skill_firearms_attribute}}}}{{secondattribute=^{skill_firearms}}}{{specialisation=@{skill_firearms_spec}}}{{dice=[[(@{skill_firearms_total}+2+@{use_wounds}+@{sustain_malus}+@{mod_roll})d6@{exploding_dice}cs>5>5sd]]}}">
-											<span class="red" data-18n="spec_short">Spez.</span>
+											<span class="red" data-i18n="spec_short">Spez.</span>
 										</button>
 									</span>
 								</div>
@@ -1810,7 +1810,7 @@
 									<span class="visible-firearms-exp"></span>
 									<span class="invisible-firearms-exp">
 										<button class="widesmallbutton" type="roll" name="@{skill_firearms_total}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{skill_firearms_attribute}}}}{{secondattribute=^{skill_firearms}}}{{expertise=@{skill_firearms_exp}}}{{dice=[[(@{skill_firearms_total}+3+@{use_wounds}+@{sustain_malus}+@{mod_roll})d6@{exploding_dice}cs>5>5sd]]}}">
-											<span class="red" data-18n="exp_short">Exp.</span>
+											<span class="red" data-i18n="exp_short">Exp.</span>
 										</button>
 									</span>
 								</div>
@@ -1885,7 +1885,7 @@
 									<span class="visible-stealth-spec"></span>
 									<span class="invisible-stealth-spec">
 										<button class="widesmallbutton" type="roll" name="@{skill_stealth_total}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{skill_stealth_attribute}}}}{{secondattribute=^{skill_stealth}}}{{specialisation=@{skill_stealth_spec}}}{{dice=[[(@{skill_stealth_total}+2+@{use_wounds}+@{sustain_malus}+@{mod_roll})d6@{exploding_dice}cs>5>5sd]]}}">
-											<span class="red" data-18n="spec_short">Spez.</span>
+											<span class="red" data-i18n="spec_short">Spez.</span>
 										</button>
 									</span>
 								</div>
@@ -1909,7 +1909,7 @@
 									<span class="visible-stealth-exp"></span>
 									<span class="invisible-stealth-exp">
 										<button class="widesmallbutton" type="roll" name="@{skill_stealth_total}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{skill_stealth_attribute}}}}{{secondattribute=^{skill_stealth}}}{{expertise=@{skill_stealth_exp}}}{{dice=[[(@{skill_stealth_total}+3+@{use_wounds}+@{sustain_malus}+@{mod_roll})d6@{exploding_dice}cs>5>5sd]]}}">
-											<span class="red" data-18n="exp_short">Exp.</span>
+											<span class="red" data-i18n="exp_short">Exp.</span>
 										</button>
 									</span>
 								</div>
@@ -1984,7 +1984,7 @@
 									<span class="visible-engineering-spec"></span>
 									<span class="invisible-engineering-spec">
 										<button class="widesmallbutton" type="roll" name="@{skill_engineering_total}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{skill_engineering_attribute}}}}{{secondattribute=^{skill_engineering}}}{{specialisation=@{skill_engineering_spec}}}{{dice=[[(@{skill_engineering_total}+2+@{use_wounds}+@{sustain_malus}+@{mod_roll})d6@{exploding_dice}cs>5>5sd]]}}">
-											<span class="red" data-18n="spec_short">Spez.</span>
+											<span class="red" data-i18n="spec_short">Spez.</span>
 										</button>
 									</span>
 								</div>
@@ -2008,7 +2008,7 @@
 									<span class="visible-engineering-exp"></span>
 									<span class="invisible-engineering-exp">
 										<button class="widesmallbutton" type="roll" name="@{skill_engineering_total}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{skill_engineering_attribute}}}}{{secondattribute=^{skill_engineering}}}{{expertise=@{skill_engineering_exp}}}{{dice=[[(@{skill_engineering_total}+3+@{use_wounds}+@{sustain_malus}+@{mod_roll})d6@{exploding_dice}cs>5>5sd]]}}">
-											<span class="red" data-18n="exp_short">Exp.</span>
+											<span class="red" data-i18n="exp_short">Exp.</span>
 										</button>
 									</span>
 								</div>
@@ -2083,7 +2083,7 @@
 									<span class="visible-melee-spec"></span>
 									<span class="invisible-melee-spec">
 										<button class="widesmallbutton" type="roll" name="@{skill_melee_total}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{skill_melee_attribute}}}}{{secondattribute=^{skill_melee}}}{{specialisation=@{skill_melee_spec}}}{{dice=[[(@{skill_melee_total}+2+@{use_wounds}+@{sustain_malus}+@{mod_roll})d6@{exploding_dice}cs>5>5sd]]}}">
-											<span class="red" data-18n="spec_short">Spez.</span>
+											<span class="red" data-i18n="spec_short">Spez.</span>
 										</button>
 									</span>
 								</div>
@@ -2107,7 +2107,7 @@
 									<span class="visible-melee-exp"></span>
 									<span class="invisible-melee-exp">
 										<button class="widesmallbutton" type="roll" name="@{skill_melee_total}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{skill_melee_attribute}}}}{{secondattribute=^{skill_melee}}}{{expertise=@{skill_melee_exp}}}{{dice=[[(@{skill_melee_total}+3+@{use_wounds}+@{sustain_malus}+@{mod_roll})d6@{exploding_dice}cs>5>5sd]]}}">
-											<span class="red" data-18n="exp_short">Exp.</span>
+											<span class="red" data-i18n="exp_short">Exp.</span>
 										</button>
 									</span>
 								</div>
@@ -2182,7 +2182,7 @@
 									<span class="visible-outdoors-spec"></span>
 									<span class="invisible-outdoors-spec">
 										<button class="widesmallbutton" type="roll" name="@{skill_outdoors_total}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{skill_outdoors_attribute}}}}{{seoutdoorsdattribute=^{skill_outdoors}}}{{specialisation=@{skill_outdoors_spec}}}{{dice=[[(@{skill_outdoors_total}+2+@{use_wounds}+@{sustain_malus}+@{mod_roll})d6@{exploding_dice}cs>5>5sd]]}}">
-											<span class="red" data-18n="spec_short">Spez.</span>
+											<span class="red" data-i18n="spec_short">Spez.</span>
 										</button>
 									</span>
 								</div>
@@ -2206,7 +2206,7 @@
 									<span class="visible-outdoors-exp"></span>
 									<span class="invisible-outdoors-exp">
 										<button class="widesmallbutton" type="roll" name="@{skill_outdoors_total}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{skill_outdoors_attribute}}}}{{seoutdoorsdattribute=^{skill_outdoors}}}{{expertise=@{skill_outdoors_exp}}}{{dice=[[(@{skill_outdoors_total}+3+@{use_wounds}+@{sustain_malus}+@{mod_roll})d6@{exploding_dice}cs>5>5sd]]}}">
-											<span class="red" data-18n="exp_short">Exp.</span>
+											<span class="red" data-i18n="exp_short">Exp.</span>
 										</button>
 									</span>
 								</div>
@@ -2281,7 +2281,7 @@
 									<span class="visible-piloting-spec"></span>
 									<span class="invisible-piloting-spec">
 										<button class="widesmallbutton" type="roll" name="@{skill_piloting_total}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{skill_piloting_attribute}}}}{{secondattribute=^{skill_piloting}}}{{specialisation=@{skill_piloting_spec}}}{{dice=[[(@{skill_piloting_total}+2+@{use_wounds}+@{sustain_malus}+@{mod_roll})d6@{exploding_dice}cs>5>5sd]]}}">
-											<span class="red" data-18n="spec_short">Spez.</span>
+											<span class="red" data-i18n="spec_short">Spez.</span>
 										</button>
 									</span>
 								</div>
@@ -2305,7 +2305,7 @@
 									<span class="visible-piloting-exp"></span>
 									<span class="invisible-piloting-exp">
 										<button class="widesmallbutton" type="roll" name="@{skill_piloting_total}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{skill_piloting_attribute}}}}{{secondattribute=^{skill_piloting}}}{{expertise=@{skill_piloting_exp}}}{{dice=[[(@{skill_piloting_total}+3+@{use_wounds}+@{sustain_malus}+@{mod_roll})d6@{exploding_dice}cs>5>5sd]]}}">
-											<span class="red" data-18n="exp_short">Exp.</span>
+											<span class="red" data-i18n="exp_short">Exp.</span>
 										</button>
 									</span>
 								</div>
@@ -2380,7 +2380,7 @@
 									<span class="visible-con-spec"></span>
 									<span class="invisible-con-spec">
 										<button class="widesmallbutton" type="roll" name="@{skill_con_total}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{skill_con_attribute}}}}{{secondattribute=^{skill_con}}}{{specialisation=@{skill_con_spec}}}{{dice=[[(@{skill_con_total}+2+@{use_wounds}+@{sustain_malus}+@{mod_roll})d6@{exploding_dice}cs>5>5sd]]}}">
-											<span class="red" data-18n="spec_short">Spez.</span>
+											<span class="red" data-i18n="spec_short">Spez.</span>
 										</button>
 									</span>
 								</div>
@@ -2404,7 +2404,7 @@
 									<span class="visible-con-exp"></span>
 									<span class="invisible-con-exp">
 										<button class="widesmallbutton" type="roll" name="@{skill_con_total}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{skill_con_attribute}}}}{{secondattribute=^{skill_con}}}{{expertise=@{skill_con_exp}}}{{dice=[[(@{skill_con_total}+3+@{use_wounds}+@{sustain_malus}+@{mod_roll})d6@{exploding_dice}cs>5>5sd]]}}">
-											<span class="red" data-18n="exp_short">Exp.</span>
+											<span class="red" data-i18n="exp_short">Exp.</span>
 										</button>
 									</span>
 								</div>
@@ -2479,7 +2479,7 @@
 									<span class="visible-perception-spec"></span>
 									<span class="invisible-perception-spec">
 										<button class="widesmallbutton" type="roll" name="@{skill_perception_total}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{skill_perception_attribute}}}}{{seperceptiondattribute=^{skill_perception}}}{{specialisation=@{skill_perception_spec}}}{{dice=[[(@{skill_perception_total}+2+@{use_wounds}+@{sustain_malus}+@{mod_roll})d6@{exploding_dice}cs>5>5sd]]}}">
-											<span class="red" data-18n="spec_short">Spez.</span>
+											<span class="red" data-i18n="spec_short">Spez.</span>
 										</button>
 									</span>
 								</div>
@@ -2503,7 +2503,7 @@
 									<span class="visible-perception-exp"></span>
 									<span class="invisible-perception-exp">
 										<button class="widesmallbutton" type="roll" name="@{skill_perception_total}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{skill_perception_attribute}}}}{{seperceptiondattribute=^{skill_perception}}}{{expertise=@{skill_perception_exp}}}{{dice=[[(@{skill_perception_total}+3+@{use_wounds}+@{sustain_malus}+@{mod_roll})d6@{exploding_dice}cs>5>5sd]]}}">
-											<span class="red" data-18n="exp_short">Exp.</span>
+											<span class="red" data-i18n="exp_short">Exp.</span>
 										</button>
 									</span>
 								</div>
@@ -2605,10 +2605,10 @@
             </div>
             <div class="smallspacer">&nbsp;</div>
             <input class="toggle-hide-complex-damage" name="attr_rangehidecomplexdamage" type="checkbox" value="1"/>
-            <span class="red" data-18n="complex_damage_options">komplexer Schaden</span>
+            <span class="red" data-i18n="complex_damage_options">komplexer Schaden</span>
             <div class="smallspacer">&nbsp;</div>
             <input class="toggle-hide-complex-ammo" name="attr_rangehidecomplexammo" type="checkbox" value="1"/>
-            <span class="red" data-18n="complex_ammo_options">komplexe Munition</span>
+            <span class="red" data-i18n="complex_ammo_options">komplexe Munition</span>
             <input class="toggle-hide toggle-hide-both" name="attr_rangehideboth" type="checkbox" value="1"/>
             <div class="hidebyboth">
                 <br>
@@ -2689,14 +2689,14 @@
             <br>
             <div class="range-textbox-huge"><span data-i18n="available_firemods">verfügbare Feuermodi</span></div>
             <select class="firemodedropdown" name="attr_firemode">
-                <option value="0" data-i18n="em" selected>nur EM</option>
-                <option value="1" data-i18n="hm">HM</option>
-                <option value="2" data-i18n="sm">SM</option>
-                <option value="3" data-i18n="hmsm">HM/SM</option>
-                <option value="4" data-i18n="am">AM</option>
-                <option value="5" data-i18n="hmam">HM/AM</option>
-                <option value="6" data-i18n="smam">SM/AM</option>
-                <option value="7" data-i18n="hmsmam">HM/SM/AM</option>
+                <option value="0" data-i18n="option_em">nur EM</option>
+                <option value="1" data-i18n="option_hm">HM</option>
+                <option value="2" data-i18n="option_sm">SM</option>
+                <option value="3" data-i18n="option_hmsm">HM/SM</option>
+                <option value="4" data-i18n="option_am">AM</option>
+                <option value="5" data-i18n="option_hmam">HM/AM</option>
+                <option value="6" data-i18n="option_smam">SM/AM</option>
+                <option value="7" data-i18n="option_hmsmam">HM/SM/AM</option>
             </select>
             <input class="hide smallinput" type="number" name="attr_firemode_ar_mod" value="0" placeholder="0" title="@{firemode_ar_mod}" min="-10" max="10" />
             <input class="hide smallinput" type="number" name="attr_firemode_dam_mod" value="0" placeholder="0" title="@{firemode_dam_mod}" min="-10" max="10" />
@@ -3047,7 +3047,7 @@
                                         <span class="visible-astral-spec"></span>
                                         <span class="invisible-astral-spec">
                                             <button class="widesmallbutton" type="roll" name="@{magic_astral_spec}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{magic_astral_attribute}}}}{{secondattribute=^{skill_astral}}}{{specialisation=@{skill_astral_spec}}}{{dicepool=^{@{magic_astral_total_spec}}}}{{dice=[[(@{magic_astral_total}+@{use_wounds}+@{sustain_malus}+@{mod_roll}+2)d6@{exploding_dice}cs>5>5sd]]}}">
-                                                <span class="red" data-18n="spec_short">Spez.</span>
+                                                <span class="red" data-i18n="spec_short">Spez.</span>
                                             </button>
                                         </span>
                                     </div>
@@ -3056,7 +3056,7 @@
                                         <span class="visible-astral-exp"></span>
                                         <span class="invisible-astral-exp">
                                             <button class="widesmallbutton" type="roll" name="@{magic_astral_exp}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{magic_astral_attribute}}}}{{secondattribute=^{skill_astral}}}{{expertise=@{skill_astral_exp}}}{{dicepool=^{@{magic_astral_total_exp}}}}{{dice=[[(@{magic_astral_total}+@{use_wounds}+@{sustain_malus}+@{mod_roll}+3)d6@{exploding_dice}cs>5>5sd]]}}">
-                                                <span class="red" data-18n="exp_short">Exp.</span>
+                                                <span class="red" data-i18n="exp_short">Exp.</span>
                                             </button>
                                         </span>
                                     </div>
@@ -3106,7 +3106,7 @@
                                         <span class="visible-conjuring-spec"></span>
                                         <span class="invisible-conjuring-spec">
                                             <button class="widesmallbutton" type="roll" name="@{magic_conjuring_spec}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{magic_conjuring_attribute}}}}{{secondattribute=^{skill_conjuring}}}{{specialisation=@{skill_conjuring_spec}}}{{dicepool=^{@{magic_conjuring_total_spec}}}}{{dice=[[(@{magic_conjuring_total}+@{use_wounds}+@{sustain_malus}+@{mod_roll}+2)d6@{exploding_dice}cs>5>5sd]]}}">
-                                                <span class="red" data-18n="spec_short">Spez.</span>
+                                                <span class="red" data-i18n="spec_short">Spez.</span>
                                             </button>
                                         </span>
                                     </div>
@@ -3115,7 +3115,7 @@
                                         <span class="visible-conjuring-exp"></span>
                                         <span class="invisible-conjuring-exp">
                                             <button class="widesmallbutton" type="roll" name="@{magic_conjuring_exp}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{magic_conjuring_attribute}}}}{{secondattribute=^{skill_conjuring}}}{{expertise=@{skill_conjuring_exp}}}{{dicepool=^{@{magic_conjuring_total_exp}}}}{{dice=[[(@{magic_conjuring_total}+@{use_wounds}+@{sustain_malus}+@{mod_roll}+3)d6@{exploding_dice}cs>5>5sd]]}}">
-                                                <span class="red" data-18n="exp_short">Exp.</span>
+                                                <span class="red" data-i18n="exp_short">Exp.</span>
                                             </button>
                                         </span>
                                     </div>
@@ -3165,7 +3165,7 @@
                                         <span class="visible-sorcery-spec"></span>
                                         <span class="invisible-sorcery-spec">
                                             <button class="widesmallbutton" type="roll" name="@{magic_sorcery_spec}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{magic_sorcery_attribute}}}}{{secondattribute=^{skill_sorcery}}}{{specialisation=@{skill_sorcery_spec}}}{{dicepool=^{@{magic_sorcery_total_spec}}}}{{dice=[[(@{magic_sorcery_total}+@{use_wounds}+@{sustain_malus}+@{mod_roll}+2)d6@{exploding_dice}cs>5>5sd]]}}">
-                                                <span class="red" data-18n="spec_short">Spez.</span>
+                                                <span class="red" data-i18n="spec_short">Spez.</span>
                                             </button>
                                         </span>
                                     </div>
@@ -3174,7 +3174,7 @@
                                         <span class="visible-sorcery-exp"></span>
                                         <span class="invisible-sorcery-exp">
                                             <button class="widesmallbutton" type="roll" name="@{magic_sorcery_exp}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{magic_sorcery_attribute}}}}{{secondattribute=^{skill_sorcery}}}{{expertise=@{skill_sorcery_exp}}}{{dicepool=^{@{magic_sorcery_total_exp}}}}{{dice=[[(@{magic_sorcery_total}+@{use_wounds}+@{sustain_malus}+@{mod_roll}+3)d6@{exploding_dice}cs>5>5sd]]}}">
-                                                <span class="red" data-18n="exp_short">Exp.</span>
+                                                <span class="red" data-i18n="exp_short">Exp.</span>
                                             </button>
                                         </span>
                                     </div>
@@ -3224,7 +3224,7 @@
                                         <span class="visible-enchanting-spec"></span>
                                         <span class="invisible-enchanting-spec">
                                             <button class="widesmallbutton" type="roll" name="@{magic_enchanting_spec}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{magic_enchanting_attribute}}}}{{secondattribute=^{skill_enchanting}}}{{specialisation=@{skill_enchanting_spec}}}{{dicepool=^{@{magic_enchanting_total_spec}}}}{{dice=[[(@{magic_enchanting_total}+@{use_wounds}+@{sustain_malus}+@{mod_roll}+2)d6@{exploding_dice}cs>5>5sd]]}}">
-                                                <span class="red" data-18n="spec_short">Spez.</span>
+                                                <span class="red" data-i18n="spec_short">Spez.</span>
                                             </button>
                                         </span>
                                     </div>
@@ -3233,7 +3233,7 @@
                                         <span class="visible-enchanting-exp"></span>
                                         <span class="invisible-enchanting-exp">
                                             <button class="widesmallbutton" type="roll" name="@{magic_enchanting_exp}" value="@{gm_toggle} &{template:roll}{{mainattribute=^{@{magic_enchanting_attribute}}}}{{secondattribute=^{skill_enchanting}}}{{expertise=@{skill_enchanting_exp}}}{{dicepool=^{@{magic_enchanting_total_exp}}}}{{dice=[[(@{magic_enchanting_total}+@{use_wounds}+@{sustain_malus}+@{mod_roll}+3)d6@{exploding_dice}cs>5>5sd]]}}">
-                                                <span class="red" data-18n="exp_short">Exp.</span>
+                                                <span class="red" data-i18n="exp_short">Exp.</span>
                                             </button>
                                         </span>
                                     </div>
