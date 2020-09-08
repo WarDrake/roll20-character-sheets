@@ -131,9 +131,9 @@
 
 	const force = ['athletisme'];
 	const dexterite = ['acrobaties', 'discretion', 'escamotage', 'acrobaties'];
-	const intelligence = ['arcanes', 'histoire', 'investigation', 'nature', 'religion'];
+	const intelligence = ['arcanes', 'histoire', 'investigation', 'loi', 'mysteres','nature', 'religion','sciences','stategie','theologie'];
 	const sagesse = ['dressage', 'medecine', 'perception', 'perspicacite', 'survie'];
-	const charisme = ['intimidation', 'persuasion', 'representation', 'supercherie'];
+	const charisme = ['intimidation', 'persuasion', 'representation', 'supercherie','etiquette'];
 	
 	_.each(force,function(stat) 
 	{
@@ -590,6 +590,17 @@
 					</button>
 					<input type="number" name="attr_escamotage_score" value="0" readonly />
 				</div>
+
+				<div>
+					<label>
+						<input type="checkbox" name="attr_etiquette_maitrise" value="[[?{Multiplicateur de maîtrise|1}*@{maitrise}]]" />
+						<span></span>
+					</label>
+					<button type="roll" name="roll_etiquette" value="@{prive} &{template:base} {{type=Etiquette}} {{jet=[[1D20+[[floor((@{charisme}-10)/2)]][Modificateur] +@{charisme_bonus}[Bonus]+ @{etiquette_maitrise}[Maîtrise] ]]}} {{jet2=[[1D20+[[floor((@{charisme}-10)/2)]][Modificateur] +@{charisme_bonus}[Bonus]+ @{etiquette_maitrise}[Maîtrise] ]]}}">
+						<span>Etiquette (CHA)</span>
+					</button>
+					<input type="number" name="attr_escamotage_score" value="0" readonly />
+				</div>
 				<div>
 					<label>
 						<input type="checkbox" name="attr_histoire_maitrise" value="[[?{Multiplicateur de maîtrise|1}*@{maitrise}]]" />
@@ -622,6 +633,16 @@
 				</div>
 				<div>
 					<label>
+						<input type="checkbox" name="attr_loi_maitrise" value="[[?{Multiplicateur de maîtrise|1}*@{maitrise}]]" />
+						<span></span>
+					</label>
+					<button type="roll" name="roll_loi" value="@{prive} &{template:base} {{type=Loi}} {{jet=[[1D20+[[floor((@{intelligence}-10)/2)]][Modificateur] +@{intelligence_bonus}[Bonus]+ @{loi_maitrise}[Maîtrise] ]]}} {{jet2=[[1D20+[[floor((@{intelligence}-10)/2)]][Modificateur] +@{intelligence_bonus}[Bonus]+ @{loi_maitrise}[Maîtrise] ]]}}">
+						<span>Loi (INT)</span>
+					</button>
+					<input type="number" name="attr_loi_score" value="0" readonly />
+				</div>
+				<div>
+					<label>
 						<input type="checkbox" name="attr_medecine_maitrise" value="[[?{Multiplicateur de maîtrise|1}*@{maitrise}]]" />
 						<span></span>
 					</label>
@@ -629,6 +650,16 @@
 						<span>Médecine (SAG)</span>
 					</button>
 					<input type="number" name="attr_medecine_score" value="0" readonly />
+				</div>
+				<div>
+					<label>
+						<input type="checkbox" name="attr_mysteres_maitrise" value="[[?{Multiplicateur de maîtrise|1}*@{maitrise}]]" />
+						<span></span>
+					</label>
+					<button type="roll" name="roll_mysteres" value="@{prive} &{template:base} {{type=Mystères}} {{jet=[[1D20+[[floor((@{intelligence}-10)/2)]][Modificateur] +@{intelligence_bonus}[Bonus]+ @{mysteres_maitrise}[Maîtrise] ]]}} {{jet2=[[1D20+[[floor((@{intelligence}-10)/2)]][Modificateur] +@{intelligence_bonus}[Bonus]+ @{mysteres_maitrise}[Maîtrise] ]]}}">
+						<span>Mystères (INT)</span>
+					</button>
+					<input type="number" name="attr_mysteres_score" value="0" readonly />
 				</div>
 				<div>
 					<label>
@@ -692,13 +723,13 @@
 				</div>
 				<div>
 					<label>
-						<input type="checkbox" name="attr_supercherie_maitrise" value="[[?{Multiplicateur de maîtrise|1}*@{maitrise}]]" />
+						<input type="checkbox" name="attr_strategie_maitrise" value="[[?{Multiplicateur de maîtrise|1}*@{maitrise}]]" />
 						<span></span>
 					</label>
-					<button type="roll" name="roll_supercherie" value="@{prive} &{template:base} {{type=Supercherie}} {{jet=[[1D20+[[floor((@{charisme}-10)/2)]][Modificateur] +@{charisme_bonus}[Bonus]+ @{supercherie_maitrise}[Maîtrise] ]]}} {{jet2=[[1D20+[[floor((@{charisme}-10)/2)]][Modificateur] +@{charisme_bonus}[Bonus]+ @{supercherie_maitrise}[Maîtrise] ]]}}">
-						<span>Supercherie (CHA)</span>
+					<button type="roll" name="roll_strategie" value="@{prive} &{template:base} {{type=Stratégie}} {{jet=[[1D20+[[floor((@{intelligence}-10)/2)]][Modificateur] +@{intelligence_bonus}[Bonus]+ @{strategie_maitrise}[Maîtrise] ]]}} {{jet2=[[1D20+[[floor((@{intelligence}-10)/2)]][Modificateur] +@{intelligence_bonus}[Bonus]+ @{strategie_maitrise}[Maîtrise] ]]}}">
+						<span>Stratégie (INT)</span>
 					</button>
-					<input type="number" name="attr_supercherie_score" value="0" readonly />
+					<input type="number" name="attr_strategie_score" value="0" readonly />
 				</div>
 				<div>
 					<label>
@@ -710,9 +741,19 @@
 					</button>
 					<input type="number" name="attr_survie_score" value="0" readonly />
 				</div>
+				<div>
+					<label>
+						<input type="checkbox" name="attr_sciences_maitrise" value="[[?{Multiplicateur de maîtrise|1}*@{maitrise}]]" />
+						<span></span>
+					</label>
+					<button type="roll" name="roll_sciences" value="@{prive} &{template:base} {{type=Science}} {{jet=[[1D20+[[floor((@{intelligence}-10)/2)]][Modificateur] +@{intelligence_bonus}[Bonus]+ @{sciences_maitrise}[Maîtrise] ]]}} {{jet2=[[1D20+[[floor((@{intelligence}-10)/2)]][Modificateur] +@{intelligence_bonus}[Bonus]+ @{sciences_maitrise}[Maîtrise] ]]}}">
+						<span>Sciences (INT)</span>
+					</button>
+					<input type="number" name="attr_sciences_score" value="0" readonly />
+				</div>
 			</div>
 		</div>
-		
+
 		<div class="col3">
 			<div class="informations fichePJ">
 				<label>
@@ -1126,6 +1167,16 @@
 				</div>
 				<div>
 					<label>
+						<input type="checkbox" name="attr_etiquette_maitrise" value="[[?{Multiplicateur de maîtrise|1}*@{maitrise}]]" />
+						<span></span>
+					</label>
+					<button type="roll" name="roll_etiquette" value="@{prive} &{template:base} {{type=Etiquette}} {{jet=[[1D20+[[floor((@{charisme}-10)/2)]][Modificateur] +@{charisme_bonus}[Bonus]+ @{etiquette_maitrise}[Maîtrise] ]]}} {{jet2=[[1D20+[[floor((@{charisme}-10)/2)]][Modificateur] +@{charisme_bonus}[Bonus]+ @{etiquette_maitrise}[Maîtrise] ]]}}">
+						<span>Etiquette (CHA)</span>
+					</button>
+					<input type="number" name="attr_etiquette_score" value="0" readonly />
+				</div>
+				<div>
+					<label>
 						<input type="checkbox" name="attr_histoire_maitrise" value="[[?{Multiplicateur de maîtrise|1}*@{maitrise}]]" />
 						<span></span>
 					</label>
@@ -1156,6 +1207,16 @@
 				</div>
 				<div>
 					<label>
+						<input type="checkbox" name="attr_loi_maitrise" value="[[?{Multiplicateur de maîtrise|1}*@{maitrise}]]" />
+						<span></span>
+					</label>
+					<button type="roll" name="roll_loi" value="@{prive} &{template:base} {{type=Loi}} {{jet=[[1D20+[[floor((@{intelligence}-10)/2)]][Modificateur] +@{intelligence_bonus}[Bonus]+ @{loi_maitrise}[Maîtrise] ]]}} {{jet2=[[1D20+[[floor((@{intelligence}-10)/2)]][Modificateur] +@{intelligence_bonus}[Bonus]+ @{loi_maitrise}[Maîtrise] ]]}}">
+						<span>Loi (INT)</span>
+					</button>
+					<input type="number" name="attr_loi_score" value="0" readonly />
+				</div>
+				<div>
+					<label>
 						<input type="checkbox" name="attr_medecine_maitrise" value="[[?{Multiplicateur de maîtrise|1}*@{maitrise}]]" />
 						<span></span>
 					</label>
@@ -1163,6 +1224,16 @@
 						<span>Médecine (SAG)</span>
 					</button>
 					<input type="number" name="attr_medecine_score" value="0" readonly />
+				</div>
+				<div>
+					<label>
+						<input type="checkbox" name="attr_mysteres_maitrise" value="[[?{Multiplicateur de maîtrise|1}*@{maitrise}]]" />
+						<span></span>
+					</label>
+					<button type="roll" name="roll_mysteres" value="@{prive} &{template:base} {{type=Mystères}} {{jet=[[1D20+[[floor((@{intelligence}-10)/2)]][Modificateur] +@{intelligence_bonus}[Bonus]+ @{mysteres_maitrise}[Maîtrise] ]]}} {{jet2=[[1D20+[[floor((@{intelligence}-10)/2)]][Modificateur] +@{intelligence_bonus}[Bonus]+ @{mysteres_maitrise}[Maîtrise] ]]}}">
+						<span>Mystères (INT)</span>
+					</button>
+					<input type="number" name="attr_mysteres_score" value="0" readonly />
 				</div>
 				<div>
 					<label>
@@ -1234,6 +1305,19 @@
 					</button>
 					<input type="number" name="attr_supercherie_score" value="0" readonly />
 				</div>
+
+
+				<div>
+					<label>
+						<input type="checkbox" name="attr_strategie_maitrise" value="[[?{Multiplicateur de maîtrise|1}*@{maitrise}]]" />
+						<span></span>
+					</label>
+					<button type="roll" name="roll_strategie" value="@{prive} &{template:base} {{type=Stratégie}} {{jet=[[1D20+[[floor((@{intelligence}-10)/2)]][Modificateur] +@{intelligence_bonus}[Bonus]+ @{strategie_maitrise}[Maîtrise] ]]}} {{jet2=[[1D20+[[floor((@{intelligence}-10)/2)]][Modificateur] +@{intelligence_bonus}[Bonus]+ @{strategie_maitrise}[Maîtrise] ]]}}">
+						<span>Stratégie (INT)</span>
+					</button>
+					<input type="number" name="attr_strategie_score" value="0" readonly />
+				</div>
+
 				<div>
 					<label>
 						<input type="checkbox" name="attr_survie_maitrise" value="[[?{Multiplicateur de maîtrise|1}*@{maitrise}]]" />
@@ -1244,6 +1328,18 @@
 					</button>
 					<input type="number" name="attr_survie_score" value="0" readonly />
 				</div>
+				<div>
+					<label>
+						<input type="checkbox" name="attr_sciences_maitrise" value="[[?{Multiplicateur de maîtrise|1}*@{maitrise}]]" />
+						<span></span>
+					</label>
+					<button type="roll" name="roll_sciences" value="@{prive} &{template:base} {{type=Survie}} {{jet=[[1D20+[[floor((@{intelligence}-10)/2)]][Modificateur] +@{intelligence_bonus}[Bonus]+ @{sciences_maitrise}[Maîtrise] ]]}} {{jet2=[[1D20+[[floor((@{intelligence}-10)/2)]][Modificateur] +@{intelligence_bonus}[Bonus]+ @{sciences_maitrise}[Maîtrise] ]]}}">
+						<span>Sciences (INT)</span>
+					</button>
+					<input type="number" name="attr_sciences_score" value="0" readonly />
+				</div>
+			</div>
+
 			</div>
 		</div>
 		<div class="col3">
