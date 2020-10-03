@@ -30,6 +30,7 @@
 	"assaultcannon": "Cañón de asalto",
 	"assaultrifle": "Rifle de asalto",
 	"attackroll": "Tirada de ataque",
+    "attackroll_range_close": "close",
 	"attacks": "Ataques",
 	"attack_dice_pool": "Reserva de dados de Ataque",
 	"attack_value": "Valor de ataque",
